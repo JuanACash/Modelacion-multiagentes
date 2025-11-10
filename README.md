@@ -1,4 +1,4 @@
-# Modelacion-de-sistemas-multiagentes-con-gr-ficas-computacionales
+# Modelacion-de-sistemas-multiagentes-con-graficas-computacionales
 
 Conformación de equipo:
 1. Juan Andrés Castellanos Huerta A01644650
