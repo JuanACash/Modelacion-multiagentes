@@ -5,7 +5,7 @@ Conformación de equipo:
 2. Emiliano Duran Fuentes A01638902
 3. Wendy del Carmen Martinez Macias A01645818
 4. José Alfredo Vergara A01645391
-5. I
+5. Ivana Banderas Elliot A01638966
 
 Fortalezas y áreas de oportunidad:
 
