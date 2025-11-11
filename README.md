@@ -9,6 +9,7 @@ Conformación de equipo:
 
 Fortalezas y áreas de oportunidad:
 - Juan Andrés: Conocimientos basicos de Unity para poder realizar el proyecto
+- Wendy: Fortalezas: Soy constante y responsable con mis tareas. Áreas de oportunidad: A veces me cuesta expresar mis ideas, por lo que quiero practicar mas la comunicación durante el trabajo en equipo.
 
 Expectativas que del bloque:
 Hacer una simulación de un ambiente real utilizando Unity y Sitemas Multi Agentes para así poder crear esta simulación, este caso una que nos pueda ayudar a la detección de infecciones en tomates para evitar perdidas economicas.
