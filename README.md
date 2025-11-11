@@ -13,7 +13,7 @@ Fortalezas y áreas de oportunidad:
 Expectativas que del bloque:
 Hacer una simulación de un ambiente real utilizando Unity y Sitemas Multi Agentes para así poder crear esta simulación, este caso una que nos pueda ayudar a la detección de infecciones en tomates para evitar perdidas economicas.
 
-Que esperamos lograr y nuestros compromisos:
+Que esperamos lograr y nuestros compromisos: Poder crear esta simulación para poder ayudar a la deteccion de plagas y contener la propagación de estas, también que nuestro modelo pueda ayudar a automatizar metodos para que estos sean más eficientes. Nos comprometemos a crear una simulación que realmente pueda ayudar y simular este ambiente simulado.
 
 # Propuesta del reto
 Descripción:
