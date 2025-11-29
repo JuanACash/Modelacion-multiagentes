@@ -21,19 +21,16 @@ public class MaterialDetector : MonoBehaviour
         {
             Renderer rend = hit.collider.GetComponent<Renderer>();
 
-            // If no renderer on collider, try children
             if (rend == null)
                 rend = hit.collider.GetComponentInChildren<Renderer>();
 
             if (rend != null)
             {
-                // Check material name (Unity adds " (Instance)" sometimes)
                 string matName = rend.sharedMaterial.name;
 
                 if (matName.Contains(targetMaterialName))
                 {
                     hit.collider.gameObject.tag = "Infectado";
-                    Debug.Log("Tomato infected: " + hit.collider.name);
                 }
             }
         }
