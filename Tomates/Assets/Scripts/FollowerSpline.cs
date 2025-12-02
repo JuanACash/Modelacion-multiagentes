@@ -9,7 +9,6 @@ public class FollowerSpline : MonoBehaviour
 
     public List<Vector3> Path => leader != null ? leader.pathPoints : null;
 
-    // NEW - public method that RobotDestroyerSimple can call
     public void FollowPathTick()
     {
         if (leader == null || leader.pathPoints.Count == 0) return;

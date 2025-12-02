@@ -3,14 +3,13 @@ using UnityEngine.InputSystem;
 
 public class SplineToManual : MonoBehaviour
 {
-    public MonoBehaviour splineAnimate; // Your Spline Animate component
+    public MonoBehaviour splineAnimate;
     public float moveSpeed = 5f;
 
     private bool manualControl = false;
     private Rigidbody rb;
     private Camera mainCamera;
 
-    // InputAction for switching control
     private InputAction switchAction;
     private InputAction moveAction;
 
@@ -25,7 +24,6 @@ public class SplineToManual : MonoBehaviour
 
         mainCamera = Camera.main;
 
-        // Setup Input Actions
         switchAction = new InputAction("SwitchControl", binding: "<Keyboard>/space");
         switchAction.performed += ctx => EnableManualControl();
         switchAction.Enable();
@@ -58,7 +56,6 @@ public class SplineToManual : MonoBehaviour
     {
         Vector2 input = moveAction.ReadValue<Vector2>();
 
-        // Camera-relative movement
         Vector3 forward = mainCamera.transform.forward;
         Vector3 right = mainCamera.transform.right;
         forward.y = 0;

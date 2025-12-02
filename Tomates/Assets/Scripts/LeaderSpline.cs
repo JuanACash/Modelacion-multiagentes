@@ -3,8 +3,8 @@ using System.Collections.Generic;
 
 public class LeaderSpline : MonoBehaviour
 {
-    public LineRenderer lineRenderer;  // Optional, to visualize spline
-    public float minDistance = 0.1f;   // Minimum distance to add a point
+    public LineRenderer lineRenderer;
+    public float minDistance = 0.1f;
     [HideInInspector] public List<Vector3> pathPoints = new List<Vector3>();
 
     void Start()

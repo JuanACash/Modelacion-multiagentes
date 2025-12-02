@@ -4,7 +4,7 @@ using System.Collections;
 public class RobotDestroyerSimple : MonoBehaviour
 {
     [Header("Destruction Settings")]
-    public float destroyDistance = 3.0f; // Increased range (change as needed)
+    public float destroyDistance = 3.0f;
 
     [Header("Fallback Settings")]
     public float fallbackDelay = 5f;
@@ -24,21 +24,12 @@ public class RobotDestroyerSimple : MonoBehaviour
     {
         GameObject[] infectados = GameObject.FindGameObjectsWithTag("Infectado");
 
-        // 1️⃣ Destroy nearby infectados
         TryDestroyNearbyInfectado();
 
-        // 2️⃣ Check if there are any infectados left
         if (infectados.Length == 0)
         {
-            // Increase the timer
             noInfectadoTimer += Time.deltaTime;
 
-            // Pause spline movement while waiting
-            // (robot stands still but can rotate toward direction)
-            // DO NOT MOVE along the spline
-            // Just do nothing here
-
-            // 3️⃣ If more than X seconds without infectados → break spline
             if (noInfectadoTimer >= fallbackDelay)
             {
                 StartCoroutine(GoToCargador());
@@ -46,10 +37,8 @@ public class RobotDestroyerSimple : MonoBehaviour
         }
         else
         {
-            // Reset timer if there ARE infectados
             noInfectadoTimer = 0f;
 
-            // Continue following the spline normally
             if (followerSpline != null)
                 followerSpline.FollowPathTick();
         }
@@ -73,11 +62,9 @@ public class RobotDestroyerSimple : MonoBehaviour
 
     IEnumerator GoToCargador()
     {
-        // Prevent repeated triggering
         if (fallbackTimerRunning) yield break;
         fallbackTimerRunning = true;
 
-        // Clear spline (stop following)
         if (followerSpline != null && followerSpline.leader != null)
             followerSpline.leader.pathPoints.Clear();
 
