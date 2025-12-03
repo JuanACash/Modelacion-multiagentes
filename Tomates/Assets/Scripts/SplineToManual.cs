@@ -55,16 +55,21 @@ public class SplineToManual : MonoBehaviour
     void MoveWithWASD()
     {
         Vector2 input = moveAction.ReadValue<Vector2>();
+        float rotationInput = input.x;
+        float rotationSpeed = 120f;
 
-        Vector3 forward = mainCamera.transform.forward;
-        Vector3 right = mainCamera.transform.right;
-        forward.y = 0;
-        right.y = 0;
-        forward.Normalize();
-        right.Normalize();
+        if (rotationInput != 0)
+        {
+            transform.Rotate(0f, rotationInput * rotationSpeed * Time.deltaTime, 0f);
+        }
 
-        Vector3 moveDirection = (forward * input.y + right * input.x).normalized;
-        rb.MovePosition(transform.position + moveDirection * moveSpeed * Time.deltaTime);
+        float forwardInput = input.y;
+
+        if (forwardInput != 0)
+        {
+            Vector3 moveDir = transform.forward * forwardInput * moveSpeed * Time.deltaTime;
+            rb.MovePosition(rb.position + moveDir);
+        }
     }
 
     private void OnDestroy()
